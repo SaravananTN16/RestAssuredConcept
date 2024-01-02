@@ -1,0 +1,44 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "type": "array",
+    "items": {
+        "$ref": "#/definitions/Welcome8Element"
+    },
+    "definitions": {
+        "Welcome8Element": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "type": "integer"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "email": {
+                    "type": "string"
+                },
+                "location": {
+                    "$ref": "#/definitions/Location"
+                }
+            },
+            "required": [
+                "email",
+                "id",
+                "location",
+                "name"
+            ],
+            "title": "Welcome8Element"
+        },
+        "Location": {
+            "type": "string",
+            "enum": [
+                "Shanghai",
+                "Paris",
+                "Tests"
+            ],
+            "title": "Location"
+        }
+    }
+}
+
